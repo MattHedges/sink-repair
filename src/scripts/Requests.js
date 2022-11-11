@@ -1,8 +1,11 @@
 import { fetchRequests } from "./dataAccess.js"
 import { getRequests } from "./dataAccess.js"
 import { deleteRequest } from "./dataAccess.js"
+import { getPlumbers } from "./dataAccess.js"
 
 const convertRequestToListElement = (request) => {
+    let plumbers = getPlumbers()
+    
     return `
     <li>
         ${request.description}
